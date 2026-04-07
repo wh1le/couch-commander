@@ -6,6 +6,10 @@ A GTK4 remote control for LG webOS TVs. Because getting up to find the real remo
 ![GTK](https://img.shields.io/badge/GTK-4-green)
 ![Status](https://img.shields.io/badge/couch-potato%20approved-yellow)
 
+<p align="center">
+  <img src="assets/screenshot.png" alt="LG TV Remote" width="320">
+</p>
+
 ## What it does
 
 Controls your LG TV from your Linux machine over the local network. Full remote replacement:
