@@ -4,7 +4,7 @@ A GTK4 remote for LG webOS TVs. Touchpad, d-pad, volume, text input, app launche
 
 ![Python](https://img.shields.io/badge/python-3.12+-blue)
 ![GTK](https://img.shields.io/badge/GTK-4-green)
-![Status](https://img.shields.io/badge/couch-certified-yellow)
+![Status](https://img.shields.io/badge/couch-certified-brightgreen)
 
 <p align="center">
   <img src="assets/screenshot.png" alt="Couch Commander" width="320">
