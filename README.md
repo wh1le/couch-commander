@@ -24,28 +24,40 @@ Controls your LG TV from your Linux machine over the local network. Full remote 
 - **Keyboard shortcuts** — arrow keys, space, escape, +/- all work
 - **Power off** — the nuclear option
 
-## Setup
+## Install
 
 ```bash
+# pipx (recommended)
+pipx install git+https://github.com/wh1le/couch-commander
+
+# or pip
+pip install git+https://github.com/wh1le/couch-commander
+
+# or from source
+git clone https://github.com/wh1le/couch-commander
+cd couch-commander
+make install
+
 # nix users
 nix develop
-
-# everyone else
-make install
 ```
+
+> **Note:** GTK4 and PyGObject must be installed via your system package manager first. See [Dependencies](#dependencies).
 
 ## Usage
 
 ```bash
-./bin/couch-commander                # connect to default IP (192.168.50.160)
-./bin/couch-commander --ip 10.0.0.5  # connect to a specific IP
-./bin/couch-commander --scan         # auto-discover TVs and connect
-./bin/couch-commander --list         # just list TVs on the network
+couch-commander                # connect to default IP (192.168.50.160)
+couch-commander --ip 10.0.0.5  # connect to a specific IP
+couch-commander --scan         # auto-discover TVs and connect
+couch-commander --list         # just list TVs on the network
 ```
 
-Or simply:
+If running from source:
 
 ```bash
+./bin/couch-commander
+# or
 make start
 ```
 
