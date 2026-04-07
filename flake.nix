@@ -20,8 +20,9 @@
         format = "pyproject";
 
         nativeBuildInputs = [ pythonPkgs.poetry-core pkgs.gobject-introspection pkgs.wrapGAppsHook4 ];
-        buildInputs = [ pkgs.gtk4 ];
-        propagatedBuildInputs = [ pythonPkgs.aiowebostv pythonPkgs.pygobject3 ];
+        buildInputs = [ pkgs.gtk4 pkgs.glib ];
+        propagatedBuildInputs = [ pythonPkgs.aiowebostv pythonPkgs.pygobject3 pkgs.gtk4 ];
+        strictDeps = false;
       };
 
       devShells.${system}.default = pkgs.mkShell {

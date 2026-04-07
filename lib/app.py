@@ -7,6 +7,8 @@ from lib.helpers import MOUSE_SENSITIVITY, normalize_url, format_volume, find_ap
 
 
 class TVRemote(Gtk.Application):
+    __gtype_name__ = "TVRemote"
+
     def __init__(self, ip=None):
         super().__init__(application_id="com.lgtv.remote")
         self.conn = TVConnection(ip=ip) if ip else TVConnection()
