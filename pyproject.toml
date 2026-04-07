@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "lgtv-remote"
+version = "0.1.0"
+description = "LG TV remote control for webOS"
+authors = ["wh1le"]
+packages = [{include = "lib"}, {include = "lgtv_remote.py"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiowebostv = "*"
+
+[tool.poetry.scripts]
+lg = "lgtv_remote:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.2,<10.0.0)"
+]
