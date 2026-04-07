@@ -4,9 +4,8 @@
   <img src="https://img.shields.io/badge/python-3.12+-blue" alt="Python 3.12">
   <img src="https://img.shields.io/badge/GTK-4-green" alt="GTK" >
   <img src="https://img.shields.io/badge/couch-certified-brightgreen" alt="couch certified">
-
-    <br/>
-    <br/>
+  <br/>
+  <br/>
 
 A GTK4 remote for LG webOS TVs. Touchpad, d-pad, volume, text input, app launcher, and more — all from your couch. Auto-discovers TVs on the network. Because standing up to find the remote is basically a workout.
 <br/>
