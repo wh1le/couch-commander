@@ -1,14 +1,18 @@
-# 📺 Couch Commander
+<div align="center">
+  <h1>📺 Couch Commander</h1>
+
+  <img src="https://img.shields.io/badge/python-3.12+-blue" alt="Python 3.12">
+  <img src="https://img.shields.io/badge/GTK-4-green" alt="GTK" >
+  <img src="https://img.shields.io/badge/couch-certified-brightgreen" alt="couch certified">
+
+    <br/>
+    <br/>
 
 A GTK4 remote for LG webOS TVs. Touchpad, d-pad, volume, text input, app launcher, and more — all from your couch. Auto-discovers TVs on the network. Because standing up to find the remote is basically a workout.
+<br/>
+<img src="assets/icon.png" alt="Couch Commander" width="420">
 
-![Python](https://img.shields.io/badge/python-3.12+-blue)
-![GTK](https://img.shields.io/badge/GTK-4-green)
-![Status](https://img.shields.io/badge/couch-certified-brightgreen)
-
-<p align="center">
-  <img src="assets/screenshot.png" alt="Couch Commander" width="320">
-</p>
+</div>
 
 ## What it does
 
@@ -24,7 +28,31 @@ Controls your LG TV from your Linux machine over the local network. Full remote 
 - **Keyboard shortcuts** — arrow keys, space, escape, +/- all work
 - **Power off** — the nuclear option
 
+# Preview
+
+<p align="center">
+  <img src="assets/screenshot.png" alt="Couch Commander" width="320">
+</p>
+
 ## Install
+
+### Flatpak (recommended)
+
+Download `couch-commander.flatpak` from the [latest release](https://github.com/wh1le/couch-commander/releases) and install:
+
+```bash
+flatpak install couch-commander.flatpak
+flatpak run io.github.wh1le.CouchCommander
+```
+
+Or build from source:
+
+```bash
+git clone https://github.com/wh1le/couch-commander
+cd couch-commander
+make flatpak
+flatpak run io.github.wh1le.CouchCommander
+```
 
 ### NixOS / Nix
 

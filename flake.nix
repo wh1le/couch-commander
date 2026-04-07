@@ -33,6 +33,7 @@
           pythonPkgs.pygobject3
           pkgs.gtk4
           pkgs.gobject-introspection
+          pkgs.flatpak-builder
         ];
 
         shellHook = ''

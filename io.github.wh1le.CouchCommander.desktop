@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Couch Commander
+Comment=GTK4 remote for LG webOS TVs
+Exec=couch-commander
+Icon=io.github.wh1le.CouchCommander
+Terminal=false
+Type=Application
+Categories=Utility;GTK;
+Keywords=TV;Remote;LG;webOS;
+StartupWMClass=io.github.wh1le.CouchCommander

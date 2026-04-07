@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.wh1le.CouchCommander</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Couch Commander</name>
+  <summary>GTK4 remote for LG webOS TVs</summary>
+  <description>
+    <p>
+      Couch Commander lets you control your LG webOS TV from your Linux desktop.
+      Features include a touchpad for pointer control, d-pad navigation, volume control,
+      app launching, text input, URL opening, and TV notifications.
+    </p>
+  </description>
+  <url type="homepage">https://github.com/wh1le/couch-commander</url>
+  <url type="bugtracker">https://github.com/wh1le/couch-commander/issues</url>
+  <launchable type="desktop-id">io.github.wh1le.CouchCommander.desktop</launchable>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.1.0" date="2026-04-07">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+  <requires>
+    <display_length compare="ge">320</display_length>
+  </requires>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+</component>

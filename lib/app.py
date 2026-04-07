@@ -1,16 +1,22 @@
 import gi
+
 gi.require_version("Gtk", "4.0")
-from gi.repository import Gtk, GLib, Gdk
+gi.require_version("Gdk", "4.0")
 from aiowebostv import endpoints as ep
+from gi.repository import Gdk, GLib, Gtk
+
 from lib.connection import TVConnection
-from lib.helpers import MOUSE_SENSITIVITY, normalize_url, format_volume, find_app
+from lib.helpers import (MOUSE_SENSITIVITY, find_app, format_volume,
+                         normalize_url)
 
 
 class TVRemote(Gtk.Application):
     __gtype_name__ = "TVRemote"
 
     def __init__(self, ip=None):
-        super().__init__(application_id="com.lgtv.remote")
+        GLib.set_prgname("io.github.wh1le.CouchCommander")
+        GLib.set_application_name("Couch Commander")
+        super().__init__(application_id="io.github.wh1le.CouchCommander")
         self.conn = TVConnection(ip=ip) if ip else TVConnection()
         self.status = None
         self.url_entry = None
@@ -34,9 +40,10 @@ class TVRemote(Gtk.Application):
         return self.conn.tv
 
     def do_activate(self):
-        win = Gtk.ApplicationWindow(application=self, title="LG TV Remote")
+        win = Gtk.ApplicationWindow(application=self, title="Couch Commander")
         win.set_default_size(320, 560)
         win.set_resizable(False)
+        win.set_icon_name("io.github.wh1le.CouchCommander")
 
         main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=8)
         main_box.set_margin_top(12)

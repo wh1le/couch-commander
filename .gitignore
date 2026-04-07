@@ -5,3 +5,8 @@ dist/
 .venv/
 .pytest_cache/
 result
+build-dir/
+.flatpak-builder/
+*.flatpak
+*.png.bak
+repo/
