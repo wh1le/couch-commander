@@ -1,13 +1,13 @@
-# 📺 lg
+# 📺 Couch Commander
 
-A GTK4 remote control for LG webOS TVs. Because getting up to find the real remote is cardio, and we don't do that here.
+A GTK4 remote for LG webOS TVs. Touchpad, d-pad, volume, text input, app launcher, and more — all from your couch. Auto-discovers TVs on the network. Because standing up to find the remote is basically a workout.
 
 ![Python](https://img.shields.io/badge/python-3.12+-blue)
 ![GTK](https://img.shields.io/badge/GTK-4-green)
 ![Status](https://img.shields.io/badge/couch-potato%20approved-yellow)
 
 <p align="center">
-  <img src="assets/screenshot.png" alt="LG TV Remote" width="320">
+  <img src="assets/screenshot.png" alt="Couch Commander" width="320">
 </p>
 
 ## What it does
@@ -37,10 +37,10 @@ make install
 ## Usage
 
 ```bash
-./bin/lg                # connect to default IP (192.168.50.160)
-./bin/lg --ip 10.0.0.5  # connect to a specific IP
-./bin/lg --scan         # auto-discover TVs and connect
-./bin/lg --list         # just list TVs on the network
+./bin/couch-commander                # connect to default IP (192.168.50.160)
+./bin/couch-commander --ip 10.0.0.5  # connect to a specific IP
+./bin/couch-commander --scan         # auto-discover TVs and connect
+./bin/couch-commander --list         # just list TVs on the network
 ```
 
 Or simply:
@@ -53,15 +53,15 @@ On first launch, the TV will ask you to accept the connection. After that, the p
 
 ### Keyboard shortcuts
 
-| Key | Action |
-|-----|--------|
-| Arrow keys | Navigate |
-| Enter | Select |
-| Escape | Back |
-| Space | Play/Pause |
-| +/- | Volume |
-| M | Mute |
-| H | Home |
+| Key        | Action     |
+| ---------- | ---------- |
+| Arrow keys | Navigate   |
+| Enter      | Select     |
+| Escape     | Back       |
+| Space      | Play/Pause |
+| +/-        | Volume     |
+| M          | Mute       |
+| H          | Home       |
 
 ## Testing
 
@@ -74,8 +74,8 @@ make test
 Pass `--ip` to connect to a different TV, or use `--scan` to auto-discover:
 
 ```bash
-./bin/lg --ip 10.0.0.5
-./bin/lg --scan
+./bin/couch-commander --ip 10.0.0.5
+./bin/couch-commander --scan
 ```
 
 The default IP (`192.168.50.160`) can be changed in `lib/config.py`.
@@ -84,12 +84,12 @@ The default IP (`192.168.50.160`) can be changed in `lib/config.py`.
 
 System packages (not installable via pip):
 
-| Distro | Install |
-|--------|---------|
-| Arch | `sudo pacman -S gtk4 python-gobject` |
-| Fedora | `sudo dnf install gtk4 python3-gobject` |
+| Distro        | Install                                                   |
+| ------------- | --------------------------------------------------------- |
+| Arch          | `sudo pacman -S gtk4 python-gobject`                      |
+| Fedora        | `sudo dnf install gtk4 python3-gobject`                   |
 | Ubuntu/Debian | `sudo apt install libgtk-4-dev python3-gi gir1.2-gtk-4.0` |
-| Nix | `nix develop` (handled by flake) |
+| Nix           | `nix develop` (handled by flake)                          |
 
 Python packages (installed automatically):
 

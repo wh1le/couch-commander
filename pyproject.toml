@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "lgtv-remote"
+name = "couch-commander"
 version = "0.1.0"
-description = "LG TV remote control for webOS"
+description = "GTK4 remote for LG webOS TVs — command your TV from the couch"
 authors = ["wh1le"]
 packages = [{include = "lib"}, {include = "lgtv_remote.py"}]
 
@@ -10,7 +10,7 @@ python = "^3.12"
 aiowebostv = "*"
 
 [tool.poetry.scripts]
-lg = "lgtv_remote:cli"
+couch-commander = "lgtv_remote:cli"
 
 [build-system]
 requires = ["poetry-core"]

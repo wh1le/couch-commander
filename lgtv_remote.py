@@ -5,7 +5,7 @@ from lib.discovery import scan
 
 
 def cli():
-    parser = argparse.ArgumentParser(description="LG TV Remote")
+    parser = argparse.ArgumentParser(description="Couch Commander — LG TV Remote")
     parser.add_argument("--ip", default=None, help=f"TV IP address (default: {TV_IP})")
     parser.add_argument("--scan", action="store_true", help="Scan for LG TVs and connect")
     parser.add_argument("--list", action="store_true", help="List LG TVs on the network and exit")
