@@ -11,5 +11,5 @@ test:
 	poetry run pytest tests/ -v
 
 flatpak:
-	flatpak install --noninteractive flathub org.gnome.Platform//49 org.gnome.Sdk//49 || true
+	flatpak install --noninteractive flathub org.gnome.Platform//47 org.gnome.Sdk//47 || true
 	flatpak-builder --user --install --force-clean build-dir io.github.wh1le.CouchCommander.yml
