@@ -26,23 +26,37 @@ Controls your LG TV from your Linux machine over the local network. Full remote 
 
 ## Install
 
+### NixOS / Nix
+
+Everything is bundled — no system deps needed:
+
+```bash
+# run it
+nix run github:wh1le/couch-commander
+
+# dev shell
+nix develop
+```
+
+### pip / pipx
+
+> **Note:** GTK4 and PyGObject must be installed via your system package manager first. See [Dependencies](#dependencies).
+
 ```bash
 # pipx (recommended)
 pipx install git+https://github.com/wh1le/couch-commander
 
 # or pip
 pip install git+https://github.com/wh1le/couch-commander
+```
 
-# or from source
+### From source
+
+```bash
 git clone https://github.com/wh1le/couch-commander
 cd couch-commander
 make install
-
-# nix users
-nix develop
 ```
-
-> **Note:** GTK4 and PyGObject must be installed via your system package manager first. See [Dependencies](#dependencies).
 
 ## Usage
 

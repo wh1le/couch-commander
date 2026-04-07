@@ -1,5 +1,5 @@
 {
-  description = "lg - LG TV remote control";
+  description = "Couch Commander — GTK4 remote for LG webOS TVs";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
@@ -14,7 +14,7 @@
     in
     {
       packages.${system}.default = python.pkgs.buildPythonApplication {
-        pname = "lg";
+        pname = "couch-commander";
         version = "0.1.0";
         src = ./.;
         format = "pyproject";
@@ -22,10 +22,6 @@
         nativeBuildInputs = [ pythonPkgs.poetry-core pkgs.gobject-introspection pkgs.wrapGAppsHook4 ];
         buildInputs = [ pkgs.gtk4 ];
         propagatedBuildInputs = [ pythonPkgs.aiowebostv pythonPkgs.pygobject3 ];
-
-        postInstall = ''
-          mv $out/bin/lg $out/bin/lg-remote
-        '';
       };
 
       devShells.${system}.default = pkgs.mkShell {
